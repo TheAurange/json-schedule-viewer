@@ -7,6 +7,7 @@ body {
 	justify-content: center;
 	font-family: Arial;
 	font-size: 12pt;
+	user-select: none;
 }
 
 section {
