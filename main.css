@@ -47,7 +47,7 @@ section > span.current {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-section > span:hover {
+section > span:hover:not(.detailsHeader) {
 	font-weight: bold;
 	background-color: rgba(0, 0, 0, 0.5);
 }
