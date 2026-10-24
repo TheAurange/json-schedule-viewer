@@ -29,6 +29,13 @@ section#details {
 	border-radius: 0px 20px 20px 0px;
 }
 
+section#details.unloaded {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+}
+
 section > span {
 	display: block;
 	height: 30px;
