@@ -53,7 +53,7 @@ section > span:hover {
 }
 
 section#yearSelector > span.yearSelectorItem {
-	width: 100px;
+	width: 120px;
 }
 
 section#monthSelector > span.monthSelectorItem {
