@@ -65,6 +65,6 @@ section#details > span {
 	text-decoration: underline;
 }
 
-section#details > p {
+section#details > p:not(#error) {
 	margin: 0px 0px 0px 5px;
 }
