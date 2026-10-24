@@ -17,6 +17,10 @@ document.querySelector("input#input").addEventListener("change", e => {
 		}
 		catch(e) {
 			console.error("Not a properly formatted JSON file.");
+
+			details.classListadd("unloaded");
+
+			return;
 		}
 
 		const years = Object.keys(data);
