@@ -18,7 +18,7 @@ document.querySelector("input#input").addEventListener("change", e => {
 		catch(e) {
 			console.error("Not a properly formatted JSON file.");
 
-			details.classListadd("unloaded");
+			details.classList.add("unloaded");
 
 			return;
 		}
