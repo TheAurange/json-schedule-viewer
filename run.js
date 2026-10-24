@@ -7,8 +7,6 @@ let data;
 document.querySelector("input#input").addEventListener("change", e => {
 	details.classList.remove("unloaded");
 
-	details.innerHTML = "";
-
 	file = new FileReader();
 
 	file.addEventListener("load", () => {
@@ -22,6 +20,8 @@ document.querySelector("input#input").addEventListener("change", e => {
 
 			return;
 		}
+
+		details.innerHTML = "";
 
 		const years = Object.keys(data);
 		const months = Object.keys(data[years[0]]);
