@@ -1,10 +1,11 @@
 const yearSelector = document.querySelector("section#yearSelector");
 const monthSelector = document.querySelector("section#monthSelector");
 const details = document.querySelector("section#details");
+const input = document.querySelector("input#input");
 
 let data;
 
-document.querySelector("input#input").addEventListener("change", e => {
+input.addEventListener("change", e => {
 	details.classList.remove("unloaded");
 
 	file = new FileReader();
@@ -14,9 +15,9 @@ document.querySelector("input#input").addEventListener("change", e => {
 			data = JSON.parse(file.result);
 		}
 		catch(e) {
-			console.error("Not a properly formatted JSON file.");
-
 			details.classList.add("unloaded");
+
+			input.value = "";
 
 			return;
 		}
