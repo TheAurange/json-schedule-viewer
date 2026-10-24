@@ -11,7 +11,7 @@ body {
 }
 
 section {
-        height: 510px;
+    height: 510px;
 }
 
 section#yearSelector {
@@ -41,7 +41,7 @@ section > span {
 	display: block;
 	height: 30px;
 	line-height: 30px;
-        text-align: center;
+    text-align: center;
 }
 
 section > span.current {
