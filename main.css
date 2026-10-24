@@ -1,0 +1,62 @@
+body {
+	margin: 0px;
+	display: flex;
+	background-color: rgba(51, 137, 204, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	align-items: center;
+	justify-content: center;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+section {
+        height: 510px;
+}
+
+section#yearSelector {
+	background-color: rgba(55, 80, 98, 1.0);
+	border-radius: 20px 0px 0px 20px;
+	contain: paint;
+}
+
+section#monthSelector {
+	background-color: rgba(85, 124, 153, 1.0);
+}
+
+section#details {
+	background-color: rgba(157, 181, 201, 1.0);
+	width: 500px;
+	border-radius: 0px 20px 20px 0px;
+}
+
+section > span {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+        text-align: center;
+}
+
+section > span.current {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+section > span:hover {
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+section#yearSelector > span.yearSelectorItem {
+	width: 100px;
+}
+
+section#monthSelector > span.monthSelectorItem {
+	width: 150px;
+}
+
+section#details > span {
+	text-decoration: underline;
+}
+
+section#details > p {
+	margin: 0px 0px 0px 5px;
+}
