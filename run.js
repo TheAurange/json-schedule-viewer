@@ -19,6 +19,8 @@ input.addEventListener("change", e => {
 
 			input.value = "";
 
+			document.querySelector("p#error").innerText = "Incorrectly formatted JSON file.";
+
 			return;
 		}
 
