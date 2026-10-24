@@ -12,16 +12,21 @@ document.querySelector("input#input").addEventListener("change", e => {
 	file = new FileReader();
 
 	file.addEventListener("load", () => {
-		data = JSON.parse(file.result);
+		try {
+			data = JSON.parse(file.result);
+		}
+		catch(e) {
+			console.error("Not a properly formatted JSON file.");
+		}
 
-                const years = Object.keys(data);
+		const years = Object.keys(data);
 		const months = Object.keys(data[years[0]]);
 
 		years.forEach((e, i) => {
 			const yearSelectorItem = document.createElement("span");
 
 			yearSelectorItem.classList.add("yearSelectorItem");
-                        yearSelectorItem.addEventListener("click", yearLoader);
+            yearSelectorItem.addEventListener("click", yearLoader);
 			yearSelectorItem.innerText = e;
 
 			if(i === 0) yearSelectorItem.classList.add("current");
@@ -63,7 +68,7 @@ document.querySelector("input#input").addEventListener("change", e => {
 });
 
 function yearLoader(){
-	if(!this.classList.contains("current")){
+	if(!this.classList.contains("current")) {
 		document.querySelector("span.yearSelectorItem.current").classList.remove("current");
 
 		this.classList.add("current");
@@ -105,7 +110,7 @@ function yearLoader(){
 }
 
 function monthLoader(month){
-	if(!this.classList.contains("current")){
+	if(!this.classList.contains("current")) {
 		document.querySelector("span.monthSelectorItem.current").classList.remove("current");
 
 		this.classList.add("current");
